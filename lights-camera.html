@@ -3,12 +3,36 @@
   color: #333;
 }
 
+a {
+  color: #333;
+}
+
 p {
   margin: 0px;
 }
 
+.category-div .category, #toc .category {
+  margin: 0px 0px 7px 0px;
+}
+
+.category-div .category a, #toc .category a {
+  color: #990099;
+}
+
+.category-div .subcategory, #toc .subcategory {
+  margin: 15px 0px 0px 0px;
+}
+
+.category-div .subcategory a, #toc .subcategory a {
+  color: #009900;
+}
+
+.category-div .function, #toc .function {
+  margin-top: 2px;
+}
+
 .index-page .wrapper {
-  width: 850px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -18,7 +42,7 @@ p {
 
 .index-page .column {
   float: left;
-  width: 170px;
+  width: 200px;
   display: inline-block;
 }
 
@@ -28,60 +52,52 @@ p {
   background: #FAFAFA;
 }
 
-.index-page .category-div .category {
-  margin: 0px 0px 7px 0px;
-}
-
-.index-page .category-div .subcategory {
-  margin: 7px 0px 0px 0px;
-}
-
-.index-page .category-div .function {
-  margin-top: 2px;
-}
-
-.index-page .category-div a {
-  color: #333;
-}
-
 .fn-page .fns-wrapper {
   margin: auto;
   width: 700px;
 }
 
-.fn-page h2 {
+.fn-page .fns-wrapper h2 {
   margin: 10px 0px;
 }
 
-.fn-page div.function {
+.fn-page .fns-wrapper div.function {
   padding: 10px;
   margin: 10px auto;
   background: #FAFAFA;
 }
 
-.fn-page div.function code {
+.fn-page .fns-wrapper div.function code {
   margin-right: 10px;
 }
 
-.fn-page div.function h3 {
+.fn-page .fns-wrapper div.function h3 {
   margin: 2px 0px;
 }
 
-.fn-page pre {
+.fn-page .fns-wrapper pre {
   margin: 0px;
 }
 
-.fn-page dt {
+.fn-page .fns-wrapper dt {
   margin-top: 10px;
 }
 
-.fn-page dl {
+.fn-page .fns-wrapper dl {
   margin: 0px;
 }
 
-.fn-page .subcategory {
+.fn-page .fns-wrapper .subcategory {
   margin: 30px auto 0px auto;
-}</style></head><body class="fn-page"><div class="fns-wrapper"><h2>Lights, Camera</h2><h3 class="subcategory" id="camera">Camera</h3><div class="function" id="begin-camera"><h3>begin-camera</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Sets the matrix mode to the camera matrix so calls such as
+}
+
+.fn-page #toc {
+  top: 0px;
+  bottom: 20px;
+  overflow-y: scroll;
+  width: 200px;
+  position: fixed;
+}</style></head><body class="fn-page"><div id="toc"><h3><a href="index.html">Back to index</a></h3><h3 class="category"><a href="lights-camera.html">Lights, Camera</a></h3><h4 class="subcategory"><a href="#camera">Camera</a></h4><p class="function"><a href="#begin-camera">begin-camera</a></p><p class="function"><a href="#camera">camera</a></p><p class="function"><a href="#end-camera">end-camera</a></p><p class="function"><a href="#frustum">frustum</a></p><p class="function"><a href="#ortho">ortho</a></p><p class="function"><a href="#perspective">perspective</a></p><p class="function"><a href="#print-camera">print-camera</a></p><p class="function"><a href="#print-projection">print-projection</a></p><h4 class="subcategory"><a href="#coordinates">Coordinates</a></h4><p class="function"><a href="#model-x">model-x</a></p><p class="function"><a href="#model-y">model-y</a></p><p class="function"><a href="#model-z">model-z</a></p><p class="function"><a href="#screen-x">screen-x</a></p><p class="function"><a href="#screen-y">screen-y</a></p><p class="function"><a href="#screen-z">screen-z</a></p><h4 class="subcategory"><a href="#lights">Lights</a></h4><p class="function"><a href="#ambient-light">ambient-light</a></p><p class="function"><a href="#directional-light">directional-light</a></p><p class="function"><a href="#light-falloff">light-falloff</a></p><p class="function"><a href="#light-specular">light-specular</a></p><p class="function"><a href="#lights">lights</a></p><p class="function"><a href="#no-lights">no-lights</a></p><p class="function"><a href="#normal">normal</a></p><p class="function"><a href="#point-light">point-light</a></p><p class="function"><a href="#spot-light">spot-light</a></p><h4 class="subcategory"><a href="#material-properties">Material Properties</a></h4><p class="function"><a href="#ambient">ambient</a></p><p class="function"><a href="#ambient-float">ambient-float</a></p><p class="function"><a href="#ambient-int">ambient-int</a></p><p class="function"><a href="#emissive">emissive</a></p><p class="function"><a href="#emissive-float">emissive-float</a></p><p class="function"><a href="#emissive-int">emissive-int</a></p><p class="function"><a href="#shininess">shininess</a></p><p class="function"><a href="#specular">specular</a></p></div><div class="fns-wrapper"><h2>Lights, Camera</h2><h3 class="subcategory" id="camera">Camera</h3><div class="function" id="begin-camera"><h3>begin-camera</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Sets the matrix mode to the camera matrix so calls such as
 translate, rotate, apply-matrix and reset-matrix affect the
 camera. begin-camera should always be used with a following
 end-camera and pairs of begin-camera and end-camera cannot be

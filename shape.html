@@ -3,12 +3,36 @@
   color: #333;
 }
 
+a {
+  color: #333;
+}
+
 p {
   margin: 0px;
 }
 
+.category-div .category, #toc .category {
+  margin: 0px 0px 7px 0px;
+}
+
+.category-div .category a, #toc .category a {
+  color: #990099;
+}
+
+.category-div .subcategory, #toc .subcategory {
+  margin: 15px 0px 0px 0px;
+}
+
+.category-div .subcategory a, #toc .subcategory a {
+  color: #009900;
+}
+
+.category-div .function, #toc .function {
+  margin-top: 2px;
+}
+
 .index-page .wrapper {
-  width: 850px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -18,7 +42,7 @@ p {
 
 .index-page .column {
   float: left;
-  width: 170px;
+  width: 200px;
   display: inline-block;
 }
 
@@ -28,60 +52,52 @@ p {
   background: #FAFAFA;
 }
 
-.index-page .category-div .category {
-  margin: 0px 0px 7px 0px;
-}
-
-.index-page .category-div .subcategory {
-  margin: 7px 0px 0px 0px;
-}
-
-.index-page .category-div .function {
-  margin-top: 2px;
-}
-
-.index-page .category-div a {
-  color: #333;
-}
-
 .fn-page .fns-wrapper {
   margin: auto;
   width: 700px;
 }
 
-.fn-page h2 {
+.fn-page .fns-wrapper h2 {
   margin: 10px 0px;
 }
 
-.fn-page div.function {
+.fn-page .fns-wrapper div.function {
   padding: 10px;
   margin: 10px auto;
   background: #FAFAFA;
 }
 
-.fn-page div.function code {
+.fn-page .fns-wrapper div.function code {
   margin-right: 10px;
 }
 
-.fn-page div.function h3 {
+.fn-page .fns-wrapper div.function h3 {
   margin: 2px 0px;
 }
 
-.fn-page pre {
+.fn-page .fns-wrapper pre {
   margin: 0px;
 }
 
-.fn-page dt {
+.fn-page .fns-wrapper dt {
   margin-top: 10px;
 }
 
-.fn-page dl {
+.fn-page .fns-wrapper dl {
   margin: 0px;
 }
 
-.fn-page .subcategory {
+.fn-page .fns-wrapper .subcategory {
   margin: 30px auto 0px auto;
-}</style></head><body class="fn-page"><div class="fns-wrapper"><h2>Shape</h2><h3 class="subcategory" id="2d-primitives">2D Primitives</h3><div class="function" id="arc"><h3>arc</h3><dl><dt>Arguments</dt><dd><code>[x y width height start stop]</code><code>[x y width height start stop mode]</code></dd><dt>Docstring</dt><dd><pre>Draws an arc in the display window. Arcs are drawn along the outer
+}
+
+.fn-page #toc {
+  top: 0px;
+  bottom: 20px;
+  overflow-y: scroll;
+  width: 200px;
+  position: fixed;
+}</style></head><body class="fn-page"><div id="toc"><h3><a href="index.html">Back to index</a></h3><h3 class="category"><a href="shape.html">Shape</a></h3><h4 class="subcategory"><a href="#2d-primitives">2D Primitives</a></h4><p class="function"><a href="#arc">arc</a></p><p class="function"><a href="#ellipse">ellipse</a></p><p class="function"><a href="#line">line</a></p><p class="function"><a href="#point">point</a></p><p class="function"><a href="#quad">quad</a></p><p class="function"><a href="#rect">rect</a></p><p class="function"><a href="#triangle">triangle</a></p><h4 class="subcategory"><a href="#3d-primitives">3D Primitives</a></h4><p class="function"><a href="#box">box</a></p><p class="function"><a href="#sphere">sphere</a></p><p class="function"><a href="#sphere-detail">sphere-detail</a></p><h4 class="subcategory"><a href="#attributes">Attributes</a></h4><p class="function"><a href="#ellipse-mode">ellipse-mode</a></p><p class="function"><a href="#no-smooth">no-smooth</a></p><p class="function"><a href="#rect-mode">rect-mode</a></p><p class="function"><a href="#smooth">smooth</a></p><p class="function"><a href="#stroke-cap">stroke-cap</a></p><p class="function"><a href="#stroke-join">stroke-join</a></p><p class="function"><a href="#stroke-weight">stroke-weight</a></p><h4 class="subcategory"><a href="#curves">Curves</a></h4><p class="function"><a href="#bezier">bezier</a></p><p class="function"><a href="#bezier-detail">bezier-detail</a></p><p class="function"><a href="#bezier-point">bezier-point</a></p><p class="function"><a href="#bezier-tangent">bezier-tangent</a></p><p class="function"><a href="#curve">curve</a></p><p class="function"><a href="#curve-detail">curve-detail</a></p><p class="function"><a href="#curve-point">curve-point</a></p><p class="function"><a href="#curve-tangent">curve-tangent</a></p><p class="function"><a href="#curve-tightness">curve-tightness</a></p><h4 class="subcategory"><a href="#loading-and-displaying">Loading & Displaying</a></h4><p class="function"><a href="#load-shape">load-shape</a></p><p class="function"><a href="#shape">shape</a></p><p class="function"><a href="#shape-mode">shape-mode</a></p><h4 class="subcategory"><a href="#vertex">Vertex</a></h4><p class="function"><a href="#begin-contour">begin-contour</a></p><p class="function"><a href="#begin-shape">begin-shape</a></p><p class="function"><a href="#bezier-vertex">bezier-vertex</a></p><p class="function"><a href="#curve-vertex">curve-vertex</a></p><p class="function"><a href="#end-contour">end-contour</a></p><p class="function"><a href="#end-shape">end-shape</a></p><p class="function"><a href="#quadratic-vertex">quadratic-vertex</a></p><p class="function"><a href="#texture">texture</a></p><p class="function"><a href="#texture-mode">texture-mode</a></p><p class="function"><a href="#texture-wrap">texture-wrap</a></p><p class="function"><a href="#vertex">vertex</a></p></div><div class="fns-wrapper"><h2>Shape</h2><h3 class="subcategory" id="2d-primitives">2D Primitives</h3><div class="function" id="arc"><h3>arc</h3><dl><dt>Arguments</dt><dd><code>[x y width height start stop]</code><code>[x y width height start stop mode]</code></dd><dt>Docstring</dt><dd><pre>Draws an arc in the display window. Arcs are drawn along the outer
 edge of an ellipse defined by the x, y, width and height
 parameters. The origin or the arc's ellipse may be changed with the
 ellipse-mode function. The start and stop parameters specify the

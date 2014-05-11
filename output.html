@@ -3,12 +3,36 @@
   color: #333;
 }
 
+a {
+  color: #333;
+}
+
 p {
   margin: 0px;
 }
 
+.category-div .category, #toc .category {
+  margin: 0px 0px 7px 0px;
+}
+
+.category-div .category a, #toc .category a {
+  color: #990099;
+}
+
+.category-div .subcategory, #toc .subcategory {
+  margin: 15px 0px 0px 0px;
+}
+
+.category-div .subcategory a, #toc .subcategory a {
+  color: #009900;
+}
+
+.category-div .function, #toc .function {
+  margin-top: 2px;
+}
+
 .index-page .wrapper {
-  width: 850px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -18,7 +42,7 @@ p {
 
 .index-page .column {
   float: left;
-  width: 170px;
+  width: 200px;
   display: inline-block;
 }
 
@@ -28,60 +52,52 @@ p {
   background: #FAFAFA;
 }
 
-.index-page .category-div .category {
-  margin: 0px 0px 7px 0px;
-}
-
-.index-page .category-div .subcategory {
-  margin: 7px 0px 0px 0px;
-}
-
-.index-page .category-div .function {
-  margin-top: 2px;
-}
-
-.index-page .category-div a {
-  color: #333;
-}
-
 .fn-page .fns-wrapper {
   margin: auto;
   width: 700px;
 }
 
-.fn-page h2 {
+.fn-page .fns-wrapper h2 {
   margin: 10px 0px;
 }
 
-.fn-page div.function {
+.fn-page .fns-wrapper div.function {
   padding: 10px;
   margin: 10px auto;
   background: #FAFAFA;
 }
 
-.fn-page div.function code {
+.fn-page .fns-wrapper div.function code {
   margin-right: 10px;
 }
 
-.fn-page div.function h3 {
+.fn-page .fns-wrapper div.function h3 {
   margin: 2px 0px;
 }
 
-.fn-page pre {
+.fn-page .fns-wrapper pre {
   margin: 0px;
 }
 
-.fn-page dt {
+.fn-page .fns-wrapper dt {
   margin-top: 10px;
 }
 
-.fn-page dl {
+.fn-page .fns-wrapper dl {
   margin: 0px;
 }
 
-.fn-page .subcategory {
+.fn-page .fns-wrapper .subcategory {
   margin: 30px auto 0px auto;
-}</style></head><body class="fn-page"><div class="fns-wrapper"><h2>Output</h2><h3 class="subcategory" id="files">Files</h3><div class="function" id="begin-raw"><h3>begin-raw</h3><dl><dt>Arguments</dt><dd><code>[renderer filename]</code></dd><dt>Docstring</dt><dd><pre>Enables the creation of vectors from 3D data. Requires
+}
+
+.fn-page #toc {
+  top: 0px;
+  bottom: 20px;
+  overflow-y: scroll;
+  width: 200px;
+  position: fixed;
+}</style></head><body class="fn-page"><div id="toc"><h3><a href="index.html">Back to index</a></h3><h3 class="category"><a href="output.html">Output</a></h3><h4 class="subcategory"><a href="#files">Files</a></h4><p class="function"><a href="#begin-raw">begin-raw</a></p><p class="function"><a href="#end-raw">end-raw</a></p><h4 class="subcategory"><a href="#image">Image</a></h4><p class="function"><a href="#save">save</a></p><p class="function"><a href="#save-frame">save-frame</a></p></div><div class="fns-wrapper"><h2>Output</h2><h3 class="subcategory" id="files">Files</h3><div class="function" id="begin-raw"><h3>begin-raw</h3><dl><dt>Arguments</dt><dd><code>[renderer filename]</code></dd><dt>Docstring</dt><dd><pre>Enables the creation of vectors from 3D data. Requires
 corresponding end-raw command. These commands will grab the shape
 data just before it is rendered to the screen. At this stage, your
 entire scene is nothing but a long list of individual lines and

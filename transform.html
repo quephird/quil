@@ -3,12 +3,36 @@
   color: #333;
 }
 
+a {
+  color: #333;
+}
+
 p {
   margin: 0px;
 }
 
+.category-div .category, #toc .category {
+  margin: 0px 0px 7px 0px;
+}
+
+.category-div .category a, #toc .category a {
+  color: #990099;
+}
+
+.category-div .subcategory, #toc .subcategory {
+  margin: 15px 0px 0px 0px;
+}
+
+.category-div .subcategory a, #toc .subcategory a {
+  color: #009900;
+}
+
+.category-div .function, #toc .function {
+  margin-top: 2px;
+}
+
 .index-page .wrapper {
-  width: 850px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -18,7 +42,7 @@ p {
 
 .index-page .column {
   float: left;
-  width: 170px;
+  width: 200px;
   display: inline-block;
 }
 
@@ -28,60 +52,52 @@ p {
   background: #FAFAFA;
 }
 
-.index-page .category-div .category {
-  margin: 0px 0px 7px 0px;
-}
-
-.index-page .category-div .subcategory {
-  margin: 7px 0px 0px 0px;
-}
-
-.index-page .category-div .function {
-  margin-top: 2px;
-}
-
-.index-page .category-div a {
-  color: #333;
-}
-
 .fn-page .fns-wrapper {
   margin: auto;
   width: 700px;
 }
 
-.fn-page h2 {
+.fn-page .fns-wrapper h2 {
   margin: 10px 0px;
 }
 
-.fn-page div.function {
+.fn-page .fns-wrapper div.function {
   padding: 10px;
   margin: 10px auto;
   background: #FAFAFA;
 }
 
-.fn-page div.function code {
+.fn-page .fns-wrapper div.function code {
   margin-right: 10px;
 }
 
-.fn-page div.function h3 {
+.fn-page .fns-wrapper div.function h3 {
   margin: 2px 0px;
 }
 
-.fn-page pre {
+.fn-page .fns-wrapper pre {
   margin: 0px;
 }
 
-.fn-page dt {
+.fn-page .fns-wrapper dt {
   margin-top: 10px;
 }
 
-.fn-page dl {
+.fn-page .fns-wrapper dl {
   margin: 0px;
 }
 
-.fn-page .subcategory {
+.fn-page .fns-wrapper .subcategory {
   margin: 30px auto 0px auto;
-}</style></head><body class="fn-page"><div class="fns-wrapper"><h2>Transform</h2><div class="function" id="apply-matrix"><h3>apply-matrix</h3><dl><dt>Arguments</dt><dd><code>[n00 n01 n02 n10 n11 n12]</code><code>[n00 n01 n02 n03 n10 n11 n12 n13 n20 n21 n22 n23 n30 n31 n32 n33]</code></dd><dt>Docstring</dt><dd><pre>Multiplies the current matrix by the one specified through the
+}
+
+.fn-page #toc {
+  top: 0px;
+  bottom: 20px;
+  overflow-y: scroll;
+  width: 200px;
+  position: fixed;
+}</style></head><body class="fn-page"><div id="toc"><h3><a href="index.html">Back to index</a></h3><h3 class="category"><a href="transform.html">Transform</a></h3><p class="function"><a href="#apply-matrix">apply-matrix</a></p><p class="function"><a href="#pop-matrix">pop-matrix</a></p><p class="function"><a href="#print-matrix">print-matrix</a></p><p class="function"><a href="#push-matrix">push-matrix</a></p><p class="function"><a href="#reset-matrix">reset-matrix</a></p><p class="function"><a href="#rotate">rotate</a></p><p class="function"><a href="#rotate-x">rotate-x</a></p><p class="function"><a href="#rotate-y">rotate-y</a></p><p class="function"><a href="#rotate-z">rotate-z</a></p><p class="function"><a href="#scale">scale</a></p><p class="function"><a href="#shear-x">shear-x</a></p><p class="function"><a href="#shear-y">shear-y</a></p><p class="function"><a href="#translate">translate</a></p><h4 class="subcategory"><a href="#utility-macros">Utility Macros</a></h4><p class="function"><a href="#with-rotation">with-rotation</a></p><p class="function"><a href="#with-translation">with-translation</a></p></div><div class="fns-wrapper"><h2>Transform</h2><div class="function" id="apply-matrix"><h3>apply-matrix</h3><dl><dt>Arguments</dt><dd><code>[n00 n01 n02 n10 n11 n12]</code><code>[n00 n01 n02 n03 n10 n11 n12 n13 n20 n21 n22 n23 n30 n31 n32 n33]</code></dd><dt>Docstring</dt><dd><pre>Multiplies the current matrix by the one specified through the
 parameters. This is very slow because it will try to calculate the
 inverse of the transform, so avoid it whenever possible. The
 equivalent function in OpenGL is glMultMatrix().</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>applyMatrix()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="pop-matrix"><h3>pop-matrix</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Pops the current transformation matrix off the matrix
