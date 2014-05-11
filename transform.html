@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html><head><style>body {
+  color: #333;
+}
+
+p {
+  margin: 0px;
+}
+
+.index-page .wrapper {
+  width: 850px;
+  margin: auto;
+}
+
+.index-page #title {
+  text-align: center;
+}
+
+.index-page .column {
+  float: left;
+  width: 170px;
+  display: inline-block;
+}
+
+.index-page .category-div {
+  padding: 10px;
+  margin: 10px;
+  background: #FAFAFA;
+}
+
+.index-page .category-div .category {
+  margin: 0px 0px 7px 0px;
+}
+
+.index-page .category-div .subcategory {
+  margin: 7px 0px 0px 0px;
+}
+
+.index-page .category-div .function {
+  margin-top: 2px;
+}
+
+.index-page .category-div a {
+  color: #333;
+}
+
+.fn-page .fns-wrapper {
+  margin: auto;
+  width: 700px;
+}
+
+.fn-page h2 {
+  margin: 10px 0px;
+}
+
+.fn-page div.function {
+  padding: 10px;
+  margin: 10px auto;
+  background: #FAFAFA;
+}
+
+.fn-page div.function code {
+  margin-right: 10px;
+}
+
+.fn-page div.function h3 {
+  margin: 2px 0px;
+}
+
+.fn-page pre {
+  margin: 0px;
+}
+
+.fn-page dt {
+  margin-top: 10px;
+}
+
+.fn-page dl {
+  margin: 0px;
+}
+
+.fn-page .subcategory {
+  margin: 30px auto 0px auto;
+}</style></head><body class="fn-page"><div class="fns-wrapper"><h2>Transform</h2><div class="function" id="apply-matrix"><h3>apply-matrix</h3><dl><dt>Arguments</dt><dd><code>[n00 n01 n02 n10 n11 n12]</code><code>[n00 n01 n02 n03 n10 n11 n12 n13 n20 n21 n22 n23 n30 n31 n32 n33]</code></dd><dt>Docstring</dt><dd><pre>Multiplies the current matrix by the one specified through the
+parameters. This is very slow because it will try to calculate the
+inverse of the transform, so avoid it whenever possible. The
+equivalent function in OpenGL is glMultMatrix().</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>applyMatrix()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="pop-matrix"><h3>pop-matrix</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Pops the current transformation matrix off the matrix
+stack. Understanding pushing and popping requires understanding the
+concept of a matrix stack. The push-matrix fn saves the current
+coordinate system to the stack and pop-matrix restores the prior
+coordinate system. push-matrix and pop-matrix are used in conjuction
+with the other transformation methods and may be embedded to control
+the scope of the transformations.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>popMatrix()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="print-matrix"><h3>print-matrix</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Prints the current matrix to std out. Useful for debugging.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>printMatrix()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="push-matrix"><h3>push-matrix</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Pushes the current transformation matrix onto the matrix
+stack. Understanding push-matrix and pop-matrix requires
+understanding the concept of a matrix stack. The push-matrix
+function saves the current coordinate system to the stack and
+pop-matrix restores the prior coordinate system. push-matrix and
+pop-matrix are used in conjuction with the other transformation
+methods and may be embedded to control the scope of the
+transformations.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>pushMatrix()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="reset-matrix"><h3>reset-matrix</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Replaces the current matrix with the identity matrix. The
+equivalent function in OpenGL is glLoadIdentity()</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>resetMatrix()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="rotate"><h3>rotate</h3><dl><dt>Arguments</dt><dd><code>[angle]</code><code>[angle vx vy vz]</code></dd><dt>Docstring</dt><dd><pre>Rotates a shape the amount specified by the angle parameter. Angles
+should be specified in radians (values from 0 to TWO-PI) or
+converted to radians with the radians function.
+
+Objects are always rotated around their relative position to the
+origin and positive numbers rotate objects in a clockwise
+direction. Transformations apply to everything that happens after
+and subsequent calls to the function accumulates the effect. For
+example, calling (rotate HALF-PI) and then (rotate HALF-PI) is the
+same as (rotate PI). All tranformations are reset when draw begins
+again.
+
+Technically, rotate multiplies the current transformation matrix by
+a rotation matrix. This function can be further controlled by the
+push-matrix and pop-matrix.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>rotate()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="rotate-x"><h3>rotate-x</h3><dl><dt>Arguments</dt><dd><code>[angle]</code></dd><dt>Docstring</dt><dd><pre>Rotates a shape around the x-axis the amount specified by the angle
+parameter. Angles should be specified in radians (values from 0 to
+(* PI 2)) or converted to radians with the radians function. Objects
+are always rotated around their relative position to the origin and
+positive numbers rotate objects in a counterclockwise
+direction. Transformations apply to everything that happens after
+and subsequent calls to the function accumulates the effect. For
+example, calling (rotate-x HALF-PI) and then (rotate-x HALF-PI) is
+the same as (rotate-x PI). If rotate-x is called within the draw fn,
+the transformation is reset when the loop begins again. This
+function requires either the :p3d or :opengl renderer.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>rotateX()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="rotate-y"><h3>rotate-y</h3><dl><dt>Arguments</dt><dd><code>[angle]</code></dd><dt>Docstring</dt><dd><pre>Rotates a shape around the y-axis the amount specified by the angle
+parameter. Angles should be specified in radians (values from 0
+to (* PI 2)) or converted to radians with the radians function.
+Objects are always rotated around their relative position to the
+origin and positive numbers rotate objects in a counterclockwise
+direction. Transformations apply to everything that happens after
+and subsequent calls to the function accumulates the effect. For
+example, calling (rotate-y HALF-PI) and then (rotate-y HALF-PI) is
+the same as (rotate-y PI). If rotate-y is called within the draw fn,
+the transformation is reset when the loop begins again. This
+function requires either the :p3d or :opengl renderer.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>rotateY()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="rotate-z"><h3>rotate-z</h3><dl><dt>Arguments</dt><dd><code>[angle]</code></dd><dt>Docstring</dt><dd><pre>Rotates a shape around the z-axis the amount specified by the angle
+parameter. Angles should be specified in radians (values from 0
+to (* PI 2)) or converted to radians with the radians function.
+Objects are always rotated around their relative position to the
+origin and positive numbers rotate objects in a counterclockwise
+direction. Transformations apply to everything that happens after
+and subsequent calls to the function accumulates the effect. For
+example, calling (rotate-z HALF-PI) and then (rotate-z HALF-PI) is
+the same as (rotate-z PI). If rotate-y is called within the draw fn,
+the transformation is reset when the loop begins again. This
+function requires either the :p3d or :opengl renderer.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>rotateZ()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="scale"><h3>scale</h3><dl><dt>Arguments</dt><dd><code>[s]</code><code>[sx sy]</code><code>[sx sy sz]</code></dd><dt>Docstring</dt><dd><pre>Increases or decreases the size of a shape by expanding and
+contracting vertices. Objects always scale from their relative
+origin to the coordinate system. Scale values are specified as
+decimal percentages. For example, the function call (scale 2)
+increases the dimension of a shape by 200%. Transformations apply to
+everything that happens after and subsequent calls to the function
+multiply the effect. For example, calling (scale 2) and then
+(scale 1.5) is the same as (scale 3). If scale is called within
+draw, the transformation is reset when the loop begins again. Using
+this fuction with the z parameter requires specfying :p3d or :opengl
+as the renderer. This function can be further controlled by
+push-matrix and pop-matrix.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>scale()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="shear-x"><h3>shear-x</h3><dl><dt>Arguments</dt><dd><code>[angle]</code></dd><dt>Docstring</dt><dd><pre>Shears a shape around the x-axis the amount specified by the angle
+parameter. Angles should be specified in radians (values from 0 to
+PI*2) or converted to radians with the radians() function. Objects
+are always sheared around their relative position to the origin and
+positive numbers shear objects in a clockwise direction.
+Transformations apply to everything that happens after and
+subsequent calls to the function accumulates the effect. For
+example, calling (shear-x (/ PI 2)) and then (shear-x (/ PI 2)) is
+the same as (shear-x PI). If shear-x is called within the draw fn,
+the transformation is reset when the loop begins again. This
+function works in P2D or JAVA2D mode.
+
+Technically, shear-x multiplies the current transformation matrix
+by a rotation matrix. This function can be further controlled by the
+push-matrix and pop-matrix fns.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>shearX()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="shear-y"><h3>shear-y</h3><dl><dt>Arguments</dt><dd><code>[angle]</code></dd><dt>Docstring</dt><dd><pre>Shears a shape around the y-axis the amount specified by the angle
+parameter. Angles should be specified in radians (values from 0 to
+PI*2) or converted to radians with the radians() function. Objects
+are always sheared around their relative position to the origin and
+positive numbers shear objects in a clockwise direction.
+Transformations apply to everything that happens after and
+subsequent calls to the function accumulates the effect. For
+example, calling (shear-y (/ PI 2)) and then (shear-y (/ PI 2)) is
+the same as (shear-y PI). If shear-y is called within the draw fn,
+the transformation is reset when the loop begins again. This
+function works in P2D or JAVA2D mode.
+
+Technically, shear-y multiplies the current transformation matrix
+by a rotation matrix. This function can be further controlled by the
+push-matrix and pop-matrix fns.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>shearY()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="translate"><h3>translate</h3><dl><dt>Arguments</dt><dd><code>[v]</code><code>[tx ty]</code><code>[tx ty tz]</code></dd><dt>Docstring</dt><dd><pre>Specifies an amount to displace objects within the display
+window. The x parameter specifies left/right translation, the y
+parameter specifies up/down translation, and the z parameter
+specifies translations toward/away from the screen.  Transformations
+apply to everything that happens after and subsequent calls to the
+function accumulates the effect. For example, calling (translate 50
+0) and then (translate 20, 0) is the same as (translate 70, 0). If
+translate is called within draw, the transformation is reset when
+the loop begins again. This function can be further controlled by
+the push-matrix and pop-matrix.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>translate()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><h3 class="subcategory" id="utility-macros">Utility Macros</h3><div class="function" id="with-rotation"><h3>with-rotation</h3><dl><dt>Arguments</dt><dd><code>[rotation & body]</code></dd><dt>Docstring</dt><dd><pre>Performs body with rotation, restores current transformation on exit.
+Accepts a vector [angle] or [angle x-axis y-axis z-axis].
+
+Example:
+  (with-rotation [angle]
+    (vertex 1 2))</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd>None. It is present only in Quil.</dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="with-translation"><h3>with-translation</h3><dl><dt>Arguments</dt><dd><code>[translation-vector & body]</code></dd><dt>Docstring</dt><dd><pre>Performs body with translation, restores current transformation on
+exit.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd>None. It is present only in Quil.</dd><dt>Added in</dt><dd>1.0</dd></dl></div></div></body></html>

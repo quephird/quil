@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head><style>body {
+  color: #333;
+}
+
+p {
+  margin: 0px;
+}
+
+.index-page .wrapper {
+  width: 850px;
+  margin: auto;
+}
+
+.index-page #title {
+  text-align: center;
+}
+
+.index-page .column {
+  float: left;
+  width: 170px;
+  display: inline-block;
+}
+
+.index-page .category-div {
+  padding: 10px;
+  margin: 10px;
+  background: #FAFAFA;
+}
+
+.index-page .category-div .category {
+  margin: 0px 0px 7px 0px;
+}
+
+.index-page .category-div .subcategory {
+  margin: 7px 0px 0px 0px;
+}
+
+.index-page .category-div .function {
+  margin-top: 2px;
+}
+
+.index-page .category-div a {
+  color: #333;
+}
+
+.fn-page .fns-wrapper {
+  margin: auto;
+  width: 700px;
+}
+
+.fn-page h2 {
+  margin: 10px 0px;
+}
+
+.fn-page div.function {
+  padding: 10px;
+  margin: 10px auto;
+  background: #FAFAFA;
+}
+
+.fn-page div.function code {
+  margin-right: 10px;
+}
+
+.fn-page div.function h3 {
+  margin: 2px 0px;
+}
+
+.fn-page pre {
+  margin: 0px;
+}
+
+.fn-page dt {
+  margin-top: 10px;
+}
+
+.fn-page dl {
+  margin: 0px;
+}
+
+.fn-page .subcategory {
+  margin: 30px auto 0px auto;
+}</style></head><body class="fn-page"><div class="fns-wrapper"><h2>Input</h2><h3 class="subcategory" id="keyboard">Keyboard</h3><div class="function" id="key-as-keyword"><h3>key-as-keyword</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns a keyword representing the currently pressed key. Modifier
+keys are represented as: :up, :down, :left, :right, :alt, :control,
+:shift, :command, :f1-24</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd>None. It is present only in Quil.</dd><dt>Added in</dt><dd>1.6</dd></dl></div><div class="function" id="key-code"><h3>key-code</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>The variable keyCode is used to detect special keys such as the UP,
+DOWN, LEFT, RIGHT arrow keys and ALT, CONTROL, SHIFT. When checking
+for these keys, it's first necessary to check and see if the key is
+coded. This is done with the conditional (= (key) CODED).
+
+The keys included in the ASCII specification (BACKSPACE, TAB, ENTER,
+RETURN, ESC, and DELETE) do not require checking to see if they key
+is coded, and you should simply use the key variable instead of
+key-code If you're making cross-platform projects, note that the
+ENTER key is commonly used on PCs and Unix and the RETURN key is
+used instead on Macintosh. Check for both ENTER and RETURN to make
+sure your program will work for all platforms.
+
+For users familiar with Java, the values for UP and DOWN are simply
+shorter versions of Java's KeyEvent.VK_UP and
+KeyEvent.VK_DOWN. Other keyCode values can be found in the Java
+KeyEvent reference.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>keyCode</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="key-coded?"><h3>key-coded?</h3><dl><dt>Arguments</dt><dd><code>[c]</code></dd><dt>Docstring</dt><dd><pre>Returns true if char c is a 'coded' char i.e. it is necessary to
+fetch the key-code as an integer and use that to determine the
+specific key pressed. See key-keyword.</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd>None. It is present only in Quil.</dd><dt>Added in</dt><dd>1.6</dd></dl></div><div class="function" id="key-pressed?"><h3>key-pressed?</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>true if any key is currently pressed, false otherwise.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>keyPressed</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="raw-key"><h3>raw-key</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Contains the value of the most recent key on the keyboard that was
+used (either pressed or released).
+
+For non-ASCII keys, use the keyCode variable. The keys included in
+the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and
+DELETE) do not require checking to see if they key is coded, and you
+should simply use the key variable instead of keyCode If you're
+making cross-platform projects, note that the ENTER key is commonly
+used on PCs and Unix and the RETURN key is used instead on
+Macintosh. Check for both ENTER and RETURN to make sure your program
+will work for all platforms.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>key</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><h3 class="subcategory" id="mouse">Mouse</h3><div class="function" id="mouse-button"><h3>mouse-button</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>The value of the system variable mouseButton is either :left, :right,
+or :center depending on which button is pressed. nil if no button pressed</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>mouseButton</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="mouse-pressed?"><h3>mouse-pressed?</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Variable storing if a mouse button is pressed. The value of the
+system variable mousePressed is true if a mouse button is pressed
+and false if a button is not pressed.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>mousePressed</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="mouse-x"><h3>mouse-x</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Current horizontal coordinate of the mouse.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>mouseX</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="mouse-y"><h3>mouse-y</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Current vertical coordinate of the mouse.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>mouseY</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="pmouse-x"><h3>pmouse-x</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Horizontal coordinate of the mouse in the previous frame</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>pmouseX</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="pmouse-y"><h3>pmouse-y</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Vertical coordinate of the mouse in the previous frame</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>pmouseY</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><h3 class="subcategory" id="time-and-date">Time & Date</h3><div class="function" id="day"><h3>day</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Get the current day of the month (1 through 31).</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd><code>day()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="hour"><h3>hour</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns the current hour as a value from 0 - 23.</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd><code>hour()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="millis"><h3>millis</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns the number of milliseconds (thousandths of a second) since
+starting the sketch. This information is often used for timing
+animation sequences.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>millis()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="minute"><h3>minute</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns the current minute as a value from 0 - 59</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd><code>minute()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="month"><h3>month</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns the current month as a value from 1 - 12.</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd><code>month()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="seconds"><h3>seconds</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns the current second as a value from 0 - 59.</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd><code>second()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="year"><h3>year</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns the current year as an integer (2003, 2004, 2005, etc).</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd><code>year()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div></div></body></html>
