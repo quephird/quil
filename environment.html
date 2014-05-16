@@ -128,8 +128,9 @@ is 60 frames per second.</pre></dd><dt>Works only inside sketch functions?</dt><
 size is called.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>getHeight()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="no-cursor"><h3>no-cursor</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Hides the cursor from view. Will not work when running the in full
 screen (Present) mode.</pre></dd><dt>Works only inside sketch functions?</dt><dd>Yes</dd><dt>Original Processing method</dt><dd><code>noCursor()</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="screen-height"><h3>screen-height</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns the height of the main screen in pixels.</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd><code>screen.height</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="screen-width"><h3>screen-width</h3><dl><dt>Arguments</dt><dd><code>[]</code></dd><dt>Docstring</dt><dd><pre>Returns the width of the main screen in pixels.</pre></dd><dt>Works only inside sketch functions?</dt><dd>No</dd><dt>Original Processing method</dt><dd><code>screen.width</code></dd><dt>Added in</dt><dd>1.0</dd></dl></div><div class="function" id="sketch"><h3>sketch</h3><dl><dt>Arguments</dt><dd><code>[& opts]</code></dd><dt>Docstring</dt><dd><pre>Create and start a new visualisation applet.
 
- :size           - a vector of width and height for the sketch or
-                   :fullscreen. Defaults to [500 300].
+ :size           - A vector of width and height for the sketch or :fullscreen.
+                   Defaults to [500 300]. If you're using :fullscreen you may
+                   want to enable present mode - :features [:present].
 
  :renderer       - Specify the renderer type. One of :p2d, :p3d,
                    :java2d, :opengl, :pdf). Defaults to :java2d.
